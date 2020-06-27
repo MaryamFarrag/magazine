@@ -1,0 +1,30 @@
+$s-color:#ffd100;
+$font-color: #f1f1f1;
+
+footer{
+    color:$font-color;
+    background-color:#00629b;
+    margin-top:10px;
+    padding:0 2.8rem;
+    .col-md-4{
+        margin:10px 0;
+        border-right: #f1f1f185 1px solid ;
+        .links a{
+            color:#f1f1f1;
+            display: block;
+            text-decoration: none;
+            font-size:1.2rem;
+        }
+    }
+    .title-a{
+        font-size: 2.2rem;
+        color:$font-color;
+        text-decoration: none;
+    }
+    i{
+        color:#f1f1f1;
+    }
+    i:hover{
+        color:$s-color;
+    }
+}

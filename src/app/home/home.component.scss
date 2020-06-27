@@ -1,0 +1,153 @@
+$light-font:#f1f1f1;
+*{
+    transition:all .5s ;
+}
+#home{
+    .banner{
+        background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("../../assets/images/banner.jpg");
+        width:100%;
+        background-repeat:no-repeat;
+        background-size: cover;
+        color:$light-font;
+        h1{
+            font-size:4rem;
+            text-align: center;
+            padding:13rem 0 1rem 0;
+        }
+        h1::before{
+            content: "-";
+            width:1rem;
+            height:3rem;
+            background-color:#ffa300;
+            color:#ffa300;  
+        }
+    }
+    #top-five{
+        .news-container{
+            display: flex;
+            flex-wrap: wrap;
+            .news{
+                width:33%;
+                padding:1rem;
+                .topic{
+                    position: relative;
+                    height:20rem;
+                    h2{
+                        margin:0 ;
+                    }
+                    p{
+                        margin:0;
+                        padding:0;
+                        color:#d1d0d0;
+                        float:right;
+                        font-size:.9rem;
+                    }
+                }
+                .text{
+                    position: absolute;
+                    background-color:rgba(0,0,0,.6) ;
+                    bottom:0;
+                    color:$light-font;
+                    width:100%;
+                }
+            }
+            .news:hover .topic{
+                transform: scale(.95);
+                cursor: pointer;
+            }
+            .news a:hover{
+                color:#ffa300;
+            }
+            .fst{
+                width:66%;
+                height:20rem;
+            }
+    
+        }
+    }  
+    #issues{
+        h1{
+            color:#585858;
+        }
+        .tab_container {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 70px;
+            position: relative;
+        }
+        input, section {
+            clear: both;
+            padding-top: 10px;
+            display: none;
+        }
+        label {
+            font-weight: 700;
+            font-size: 18px;
+            display: block;
+            float: left;
+            width: 24%;
+            padding: 1.5em;
+            color: #757575;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            background: #f0f0f0;
+            margin:5px;
+          }
+          label:hover{
+              border:1px solid #ffa300;
+              transform: scale(.95);
+          }
+        #tab1:checked ~ #content1,
+        #tab2:checked ~ #content2,
+        #tab3:checked ~ #content3,
+        #tab4:checked ~ #content4,
+        #tab5:checked ~ #content5 {
+        display: block;
+        padding: 20px;
+        background: #fff;
+        color: #999;
+        border-bottom: 2px solid #f0f0f0;
+        }
+        .tab_container [id^="tab"]:checked + label {
+            background: #fff;
+            box-shadow: inset 0 3px #ffa300;
+        }
+            
+        .tab_container [id^="tab"]:checked + label .fa {
+        color: #0CE;
+        }
+
+        .issue{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        .article{
+            width:33%;
+            padding:10px;
+            .img{position: relative;}
+            .layer{
+                position: absolute;
+                background-color: #fff;
+                display: none;
+                width:100%;
+                height:100%;
+                top:0;
+                transform:scale(.97);
+            }
+        }
+        .article:hover{
+            transform:scale(.97);
+            cursor: pointer;                      
+        }
+        .article:hover .layer{
+            display: block;
+            opacity: 1;
+        }
+
+          
+    } 
+
+}
